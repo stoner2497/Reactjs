@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import Contacts from './component/Contacts'
+import Header from './component/Header'
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <React.Fragment >
+    <Header text="ContactManager" Link1="hello" Link2="second" Link3="third"/>
+  <div className="container">
+    {/* <Show /> */}
+    <Contacts />
+    {/* <Data name="sahil" email="ssss" contact="asgdkhgahsdg" /> */}
+  </div>
+  </React.Fragment>
+  )
 }
-
-export default App;
