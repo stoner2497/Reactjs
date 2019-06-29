@@ -32,8 +32,15 @@ export default class Contacts extends Component {
     }
 
     onDelete = (id) => {
-        this.state.Contacts.filter(contact => contact.id !== id)
-        
+        const {Contacts} = this.state
+
+         Contacts.filter(contact => {
+             this.setState({
+                contact:contact.id !== id 
+             })
+            
+         })
+        console.log(Contacts) 
     }
     render() {
         const {Contacts} = this.state
